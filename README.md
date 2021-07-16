@@ -9,16 +9,17 @@ The beginning of bootcamp is starting introduce of power of R and this repositor
 
 ### R has 4 often common used basic data types as below
 
-###1. character
+1. character
 It can be alphabets or numbers, by quotes / double quotation marks ""
 `foo <- "This is a character string!"  # we put character using "" ` then
 `foo  # we print the variable`
 
-###2. numeric (real or decimal) 
-   Numbers that have a decimal value or are a fraction in nature have a data type as numeric. for Example :
-   `num <- 1.2   # we put 1.2 on the variable **num**` then
-   `print (num)   # we print the variable`
-###3. integer
+2. numeric (real or decimal) 
+Numbers that have a decimal value or are a fraction in nature have a data type as numeric. for Example :
+`num <- 1.2   # we put 1.2 on the variable **num**` then
+`print (num)   # we print the variable`
+
+3. integer
 indicates Numbers that do not contain decimal values have a data type as an integer or where the letter "L" declares this as an integer
 `y1 = 5L"  # we put integer using ‘L’ notation` then
 `print(class(y1))  # we print the variable`
@@ -29,6 +30,6 @@ R supports integer data types which are the set of all integers. You can create 
 `x = as.integer(x1)`
 `print(class(x))`
 
-###4. logical
+4. logical
 A variable that can have a value of TRUE and FALSE like a boolean is called a logical variable 
 `lgl_var <- c(TRUE, FALSE)`
