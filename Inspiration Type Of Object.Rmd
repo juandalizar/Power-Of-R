@@ -1,0 +1,284 @@
+---
+title: "Basic Data Type in R - Mengulang materi"
+author: "Juanda Lizar"
+date: "7/10/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#data types in R
+
+#1. numeric : 
+    Numeric: Numbers that have a decimal value or are a fraction in nature have a data type as numeric.
+
+```{r}
+num <- 1.2
+print(num)
+
+print(15.5)
+print(2.9)
+
+class(num)    #check the data type of a using keyword class()
+class(15.5)
+class(1.2)
+class(2.9)
+```
+
+#2. Character
+    It can be alphabets or numbers, by quotes / double quotation marks "" 
+
+```{r}
+foo <- "This is a character string!"
+foo
+
+
+class("semangat semangat semangat")
+
+bar <- "23.3"
+bar
+
+bar*2 # eror in bar*2 cause karena character cannot calculated like numeric
+
+"alpha"=="alpha" #tetapi character dapat digunakan fungsi perbandingan
+"alpha"!="beta"
+ c("alpha","beta","gamma")=="beta"
+ "alpha"<="beta"
+ "gamma">"Alpha"
+ "Alpha">"alpha"
+ "beta">="bEtA"
+ 
+x <- "dataset"
+typeof(x)   #selain class(), bisa juga menggunakan typeof() untuk check data type
+
+```
+```{r}
+char <- "datacamp"
+print(char)
+class(char)
+
+char1 <- "12345"
+print(char1)
+class(char1)
+
+print(paste("this will classify as",class(1)))
+class(1)
+
+print(class(char))    # print the class name of char
+print(class(char1))
+print(class(x))
+
+print(class(TRUE))
+print(class(3L))
+print(class(10.5))
+print(class(1+2i))
+print(class("12-04-2020"))
+```
+
+#3. integer, Integers are numeric data without decimals   
+indicates Numbers that do not contain decimal values have a data type as an integer or where the letter "L" declares this as an integer
+
+```{r}
+y = 5 
+print(class(y)) 
+print(typeof(y))
+
+R supports integer data types which are the set of all integers. You can create as well as convert a value into an integer type using the as.integer() function. You can also use the capital ‘L’ notation as a suffix to denote that a particular value is of the integer data
+
+x = as.integer(y) ## Create an integer value
+y1 = 5L
+
+print(class(y1)) 
+print(class(x))
+
+class(10L)
+
+v <- 2L
+print(class(v))
+```
+#4. Logical
+A variable that can have a value of TRUE and FALSE like a boolean is called a logical variable.
+
+```{r}
+print(paste("this will classify as",class(TRUE)))
+class(TRUE)
+
+```
+
+
+#Coerce or convert the data type of an object to another
+
+R also could coerce convert the data type of an object to another. to perform this action you have to the prefix "as". The syntax for doing that is as.data_type() or as.<class_name> of the object which you want to coerce.
+
+Example : 
+as.character(int_var)
+as.numeric(lgl_var)
+as.integer()
+as.factor()
+
+…
+
+```{r}
+print(as.numeric(TRUE)) #convert logical/BOLEAN into numeric
+
+print(as.complex(3L)) #convert INTEGER into compleX
+
+print(as.logical(10.5)) #convert numeric into logical
+
+print(as.character(1+2i)) #convert complex into "character"
+as.character(1:2)   #convert numeric into "character"
+
+print(as.numeric("12-04-2020"))
+
+int <- as.integer(2.2)
+print(int)
+
+```
+
+
+
+3. matrix
+A matrix is a two dimensional data set with columns and rows. A column is a vertical representation of data, while a row is a horizontal representation of data. means matrix handle two dimensional data. Table of data of the same type
+mymatrix <- matrix(vector, nrow=r, ncol=c, byrow=FALSE,
+   dimnames=list(char_vector_rownames, char_vector_colnames)) 
+
+```{r}
+a_matrix <- matrix(1:12) #calling for matrix() R function, 
+a_matrix
+
+a_matrix <- matrix(1:12, nrow=4, byrow=TRUE) #we want to fill 1:12 to the matrix
+#it is noted, that R by default fill in column wise
+#but You can change this behavior by setting byrow=TRUE. Next, we specify the dimension of this matrix, which will be nrow=4, ncol will be automatically defined as 3 (12/4=3
+  a_matrix
+
+matrix_x<-matrix(1:10,2,5)
+matrix_x
+
+z <- matrix(c(1,2,3,4,5,6), ncol=2, byrow=TRUE)
+z
+```
+#day6 dibimbing
+```{r}
+matrix(c(int_var,dbl_var))
+matrix(c(int_var,dbl_var), ncol = 3)
+
+matrix(c(lgl_var,chr_var), nrow = 2)
+
+```
+
+#replace value in matrix
+```{r}
+z[2,2] <- 10000 #calling the indext which we would like to replace then specify the value replacement
+z
+
+z2 <- z[-c(2),] #remove row no.index 2
+z2
+```
+4. Data Frames, A data frame is more general than a matrix, in that different columns can have different modes (numeric, character, factor, etc.). The data in the data frame can be spread across various columns, having different data types. it means While the first column can be character, the second and third can be numeric or logical. However, each column should have the same type of data.
+
+```{r}
+df2 <- data.frame(
+    gender = c("Male", "Female"),
+    height = c(153, 160),
+    weight = c(80, 78),
+    Age = c(40,29))
+df2
+
+BMI <- data.frame(
+   gender = c("Male", "Male","Female"), 
+   height = c(152, 171.5, 165), 
+   weight = c(81,93, 78),
+   Age = c(42,38,26)
+)
+BMI
+
+Data_Frame <- data.frame (
+  Training = c("Strength", "Stamina", "Other"),
+  Pulse = c(100, 150, 120),
+  Duration = c(60, 30, 45)
+)
+Data_Frame
+
+dataset <- data.frame(
+   Person = c("Aditya", "Ayush","Akshay"),
+   Age = c(26, 26, 27),
+   Weight = c(81,85, 90),
+   Height = c(6,5.8,6.2),
+   Salary = c(50000, 80000, 100000))
+dataset
+```
+
+#extract position of the data by specifying row and column index
+```{r}
+dataset[2,2]
+
+dataset[,c(3,1)] #extract the entire third and first column
+dataset$Age    #extract the column
+
+#adding row in the data set
+newrecord <- data.frame(Person="Brian", Age=28,
+                        Weight = 84,
+                        Height = 6.3,
+                        Salary = 70000)
+newrecord
+
+dataset2<- rbind(dataset, newrecord)
+dataset2
+
+```
+
+#adding column in the dataset
+
+
+```{r}
+Sex <- c("Male","Female","Male","Male")
+Sex <- factor(Sex, levels=c("Male", "Female"))
+Sex
+
+dataset3 <- cbind(dataset2,Sex)
+dataset3
+
+```
+
+#remove row index
+```{r}
+dataset4 <- dataset3[-c(3), ] 
+dataset4
+```
+
+
+#day6, kumpulan vector 
+```{r}
+data.frame(int_var,dbl_var)
+
+df3 <- data.frame(int_var,dbl_var,lgl_var) #cannot operate since lgl_var only have 2 value
+
+df3 <- data.frame(int_var,dbl_var,lgl_var1)
+df3
+
+df3$int_var <- df3$int_var/2
+df3$int_var
+
+df3["int_var"] <- df3["int_var"]/2
+df3["int_var"]
+
+df3[["int_var"]] <- df3[["int_var"]]/2
+df3[["int_var"]] 
+```
+
+#Usually created by read.csv() and read.table(),
+#when importing the data into R.
+
+```{r}
+data.covid <- read.csv("https://raw.githubusercontent.com/dioariadi/covid-19/master/df_indo.csv")
+data.covid
+
+str(data.covid)
+
+data.covid[1,3] <- 0.2 #replace indeks baris ke 1 kolor 3
+data.covid
+
+```
+
