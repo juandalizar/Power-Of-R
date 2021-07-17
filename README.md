@@ -5,31 +5,63 @@ Between covid 19 and taking advantage of time at home. I decide to join bootcamp
 
 The beginning of bootcamp is starting introduce of power of R and this repository contain my summary knowledge from bootcamp data science.
 
-## Everything in R is an object.
+## Everything in R is an object
+it means an object is a data structure having some attributes/types and methods/function which act on its attributes. So Objects can be provided as input to functions. Since functions are objects, they, too, can be provided as input to other functions. [Object in R are assigned a value using <-, ->, and =, and the function are assigned a value using The _assign()_ Function](https://rpubs.com/aephidayatuloh/basicr01-assignment).
 
-### R has 4 often common used basic data types as below
+To know more *Everything in R is an object*, we should learn first Data types in R. [R has 5 often common used basic data types as below](https://www.datacamp.com/community/tutorials/r-objects-and-classes) :
 
-1. character
-It can be alphabets or numbers, by quotes / double quotation marks ""
-`foo <- "This is a character string!"  # we put character using "" ` then
-`foo  # we print the variable`
+1. Character, It can be alphabets or numbers, by quotes / double quotation marks ""
+##### please see below example
+```R-Studio markdown
+foo <- "This is a character string!"  # we put character using "" then
+foo  # we print the variable
+```
 
-2. numeric (real or decimal) 
-Numbers that have a decimal value or are a fraction in nature have a data type as numeric. for Example :
-`num <- 1.2   # we put 1.2 on the variable **num**` then
-`print (num)   # we print the variable`
+2. Numeric (real or decimal), that have a decimal value or are a fraction in nature have a data type as numeric.
+##### please see below example :
+```R-Studio markdown
+num <- 1.2   # we put 1.2 on the variable **num** then
+print (num)   # we print the variable
+```
 
-3. integer
-indicates Numbers that do not contain decimal values have a data type as an integer or where the letter "L" declares this as an integer
-`y1 = 5L"  # we put integer using ‘L’ notation` then
-`print(class(y1))  # we print the variable`
+3. Integer, indicates Numbers that do not contain decimal values have a data type as an integer or where the letter "L" declares this as an integer
+##### please see below example :
+```R-Studio markdown
+y1 = 5L"  # we put integer using ‘L’ notation then
+print(class(y1))  # we print the variable
+```
+R also supports integer data types which are the set of all integers. You can create as well as convert a value into an integer type using the as.integer() function.
+##### please see below example :
+```R-Studio markdown
+x1 = 5                
+print(class(x1))
+[Output] "numeric"      # before using as.integer() function, R will read it as numeric
 
-R supports integer data types which are the set of all integers. You can create as well as convert a value into an integer type using the as.integer() function
-`x1 = 5`
-`print(class(x1))`
-`x = as.integer(x1)`
-`print(class(x))`
+x = as.integer(x1)      # then we will use as.integer() to convert a value into an integer
+print(class(x))
+[Output] "integer"
+```
+Integer without the L will be saved as doubles/numeric as we can see the only difference between 5 and 5L.
 
-4. logical
-A variable that can have a value of TRUE and FALSE like a boolean is called a logical variable 
-`lgl_var <- c(TRUE, FALSE)`
+4. Logical, indicates a variable that can have a value of TRUE and FALSE like a boolean is called a logical variable
+##### please see below example :
+```R-Studio markdown
+lgl_var <- c(TRUE, FALSE)
+print (lgl_var)   # we print the variable
+``` 
+
+6. Factor, They are a data type that is used to refer to a qualitative relationship like colors, good & bad, course or movie ratings, etc. They are useful in statistical modeling.
+##### please see below example :
+```R-Studio markdown
+fac <- factor(c("good", "bad", "ugly","good", "bad", "ugly"))
+print(fac)   # we print the variable
+
+[Output] good bad  ugly good bad  ugly
+Levels: bad good ugly
+``` 
+we also have the data type [date](https://rdrr.io/r/base/as.Date.html) and [complex](https://www.tutorialspoint.com/r/r_data_types.htm) as we focus on the main ones and this data type is rarely used in practice. for data type date, we can also klik ini this link : [1](https://www.stat.berkeley.edu/~s133/dates.html), [2](https://r4ds.had.co.nz/dates-and-times.html), [3](https://stats.idre.ucla.edu/r/faq/how-does-r-handle-date-values/), and [4](https://www.r-bloggers.com/2013/08/date-formats-in-r/)
+
+#### Basic Operation in R
+R Arithmetic Operators
+These operators are used to carry out mathematical operations like addition and multiplication. Here is a list of arithmetic operators available in R.
+![Arithmetic operators in R](https://user-images.githubusercontent.com/86560575/126043379-7233bdb6-3ba0-4500-b7d0-9ad3e25c808c.jpg)
