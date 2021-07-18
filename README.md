@@ -62,7 +62,7 @@ Levels: bad good ugly
 we also have the data type [date](https://rdrr.io/r/base/as.Date.html) and [complex](https://www.tutorialspoint.com/r/r_data_types.htm) as we focus on the main ones and this data type is rarely used in practice. for data type date, we can also klik ini this link : [1](https://www.stat.berkeley.edu/~s133/dates.html), [2](https://r4ds.had.co.nz/dates-and-times.html), [3](https://stats.idre.ucla.edu/r/faq/how-does-r-handle-date-values/), and [4](https://www.r-bloggers.com/2013/08/date-formats-in-r/).
 
 #### Basic Operation in R (R Arimatic Operators)
-thru the object or the funtion had been assigned, R allow us to do math operation using Arithmetic Operators like sums, divisions or multiplications, among others. [Here is a list of arithmetic operators available in R](https://r-coder.com/operators-r/)
+thru the object or the funtion had been assigned, R allow us to do math operation using Arithmetic Operators like sums, divisions or multiplications, among others. [Here is a list of arithmetic operators available in R](https://www.dummies.com/programming/r/how-to-do-basic-arithmetic-in-r/)
 ![Arithmetic operators in R 2](https://user-images.githubusercontent.com/86560575/126054485-5cf983f9-cccc-4391-9762-feaab6ec4e8a.jpg)
 
 ```R-Studio markdown
