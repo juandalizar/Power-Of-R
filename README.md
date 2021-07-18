@@ -59,9 +59,39 @@ print(fac)   # we print the variable
 [Output] good bad  ugly good bad  ugly
 Levels: bad good ugly
 ``` 
-we also have the data type [date](https://rdrr.io/r/base/as.Date.html) and [complex](https://www.tutorialspoint.com/r/r_data_types.htm) as we focus on the main ones and this data type is rarely used in practice. for data type date, we can also klik ini this link : [1](https://www.stat.berkeley.edu/~s133/dates.html), [2](https://r4ds.had.co.nz/dates-and-times.html), [3](https://stats.idre.ucla.edu/r/faq/how-does-r-handle-date-values/), and [4](https://www.r-bloggers.com/2013/08/date-formats-in-r/)
+we also have the data type [date](https://rdrr.io/r/base/as.Date.html) and [complex](https://www.tutorialspoint.com/r/r_data_types.htm) as we focus on the main ones and this data type is rarely used in practice. for data type date, we can also klik ini this link : [1](https://www.stat.berkeley.edu/~s133/dates.html), [2](https://r4ds.had.co.nz/dates-and-times.html), [3](https://stats.idre.ucla.edu/r/faq/how-does-r-handle-date-values/), and [4](https://www.r-bloggers.com/2013/08/date-formats-in-r/).
 
-#### Basic Operation in R
-R Arithmetic Operators
-These operators are used to carry out mathematical operations like addition and multiplication. Here is a list of arithmetic operators available in R.
-![Arithmetic operators in R](https://user-images.githubusercontent.com/86560575/126043379-7233bdb6-3ba0-4500-b7d0-9ad3e25c808c.jpg)
+#### Basic Operation in R (R Arimatic Operators)
+thru the object or the funtion had been assigned, R allow us to do math operation using Arithmetic Operators like sums, divisions or multiplications, among others. [Here is a list of arithmetic operators available in R](https://r-coder.com/operators-r/)
+![Arithmetic operators in R 2](https://user-images.githubusercontent.com/86560575/126054485-5cf983f9-cccc-4391-9762-feaab6ec4e8a.jpg)
+
+```R-Studio markdown
+#-----------------
+# Basic operations
+#-----------------
+
+x <- 8
+y = 3
+
+# Addition operator (+), : The values of both the operands are added
+print (x+y)   # 8
+
+# Subtraction Operator (-) : The second operand values are subtracted from the first
+print (x-y)   # 5
+
+# Multiplication Operator (*) : The values of both the operands are multiplied with the use of ‘*’ operator
+print (x*y)   # 24
+
+# Division Operator (/) : The first operand is divided by the second operand with the use of ‘/’ operator
+print (x/y)   # 2.67
+
+# Exponential / Power Operator (^ or **) : The first operand is raised to the power of the second operand.
+print (x^y)   # 512
+print (x**y)   # 512
+
+# Modulo Operator (%%) : The remainder of the first operand after divided by the second operand is returned.
+print (x%%y)   # 2
+
+# Floor division (%/%) or integer division : The result of division of x with y but rounded down (integer divide)
+5 %/% 3 # 1
+``` 
